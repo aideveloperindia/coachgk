@@ -131,7 +131,7 @@ export class PDFGenerator {
     }
   }
 
-  private static async addHeader(page: any, title: string, subtitle?: string, width: number, height: number) {
+  private static async addHeader(page: any, title: string, width: number, height: number, subtitle?: string) {
     const timesRomanBoldFont = await page.doc.embedFont(StandardFonts.TimesRomanBold);
     const helveticaFont = await page.doc.embedFont(StandardFonts.Helvetica);
 
@@ -256,7 +256,7 @@ export class PDFGenerator {
     await this.createBackground(page1, width, height, 'leadership');
 
     // Add header
-    await this.addHeader(page1, "Leadership Excellence Guide", `Prepared for: ${name}`, width, height);
+    await this.addHeader(page1, "Leadership Excellence Guide", width, height, `Prepared for: ${name}`);
 
     const sections1 = [
       {
@@ -348,7 +348,7 @@ export class PDFGenerator {
     const { width, height } = page.getSize();
 
     await this.createBackground(page, width, height, 'time-management');
-    await this.addHeader(page, "Time Management Masterclass", `Prepared for: ${name}`, width, height);
+    await this.addHeader(page, "Time Management Masterclass", width, height, `Prepared for: ${name}`);
 
     const content: PDFContent = {
       title: "Time Management Masterclass",
@@ -414,7 +414,7 @@ export class PDFGenerator {
     const { width, height } = page.getSize();
 
     await this.createBackground(page, width, height, 'goal-setting');
-    await this.addHeader(page, "Goal Setting Framework", `Prepared for: ${name}`, width, height);
+    await this.addHeader(page, "Goal Setting Framework", width, height, `Prepared for: ${name}`);
 
     const content: PDFContent = {
       title: "Goal Setting Framework",
@@ -483,7 +483,7 @@ export class PDFGenerator {
     const { width, height } = page.getSize();
 
     await this.createBackground(page, width, height, 'stress-management');
-    await this.addHeader(page, "Stress Management Toolkit", `Prepared for: ${name}`, width, height);
+    await this.addHeader(page, "Stress Management Toolkit", width, height, `Prepared for: ${name}`);
 
     const content: PDFContent = {
       title: "Stress Management Toolkit",

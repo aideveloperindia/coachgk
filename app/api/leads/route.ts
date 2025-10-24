@@ -14,6 +14,15 @@ export async function POST(request: Request) {
       );
     }
 
+    // Check if MongoDB is available
+    if (!clientPromise) {
+      console.log('MongoDB not configured, skipping database save');
+      return NextResponse.json(
+        { success: true, message: 'Lead received (database not configured)' },
+        { status: 200 }
+      );
+    }
+
     // Connect to MongoDB
     const client = await clientPromise;
     const db = client.db('coachgk');
@@ -45,6 +54,14 @@ export async function POST(request: Request) {
 
 export async function GET() {
   try {
+    // Check if MongoDB is available
+    if (!clientPromise) {
+      return NextResponse.json(
+        { error: 'Database not configured' },
+        { status: 503 }
+      );
+    }
+
     const client = await clientPromise;
     const db = client.db('coachgk');
     const collection = db.collection('leads');
