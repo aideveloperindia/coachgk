@@ -56,7 +56,7 @@ export default function FooterNav() {
               </h3>
               <p className="text-white/80 mb-6 leading-relaxed max-w-md">
                 Empowering individuals and organizations to unlock their full potential through
-                transformative training programs and life coaching since 1996.
+                transformative training programs and business coaching since 1996.
               </p>
               
               {/* Stats */}

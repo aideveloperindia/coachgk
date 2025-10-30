@@ -7,7 +7,7 @@ import FooterNav from "@/components/FooterNav";
 
 export const metadata: Metadata = {
   title: "Certifications & Recognitions | Gopikrishna Sarvepalli",
-  description: "View our prestigious certifications and industry recognitions that validate our expertise in corporate training and life coaching.",
+  description: "View our prestigious certifications and industry recognitions that validate our expertise in corporate training and business coaching.",
 };
 
 export default function CertificationsPage() {
