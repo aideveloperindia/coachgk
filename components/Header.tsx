@@ -67,13 +67,13 @@ export default function Header() {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-6">
+            <nav className="hidden lg:flex items-center space-x-4">
               {navigation.map((item) => {
                 const isActive = pathname === item.href;
                 return (
                   <Link key={item.name} href={item.href}>
                     <motion.div
-                      className={`relative px-4 py-2 rounded-lg font-medium text-sm transition-colors ${
+                      className={`relative px-3 py-2 rounded-lg font-medium text-sm transition-colors ${
                         isActive
                           ? "text-primary"
                           : "text-gray-700 hover:text-primary"
@@ -95,8 +95,13 @@ export default function Header() {
               })}
             </nav>
 
-            {/* CTA Button */}
-            <div className="hidden lg:flex items-center">
+            {/* CTA Buttons */}
+            <div className="hidden lg:flex items-center gap-2">
+              <a href="https://share.google/Z5qTx7NLevt7fhD0M" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="sm" className="group border-primary text-primary hover:bg-primary hover:text-white">
+                  Know More
+                </Button>
+              </a>
               <a href="https://wa.me/919666722233" target="_blank" rel="noopener noreferrer">
                 <Button variant="accent" size="sm" className="group">
                   Book Session
@@ -168,8 +173,18 @@ export default function Header() {
                   })}
                 </div>
 
-                {/* Mobile CTA Button */}
-                <div className="mt-8">
+                {/* Mobile CTA Buttons */}
+                <div className="mt-8 space-y-3">
+                  <a
+                    href="https://share.google/Z5qTx7NLevt7fhD0M"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <Button variant="outline" size="lg" className="w-full border-primary text-primary hover:bg-primary hover:text-white">
+                      Know More
+                    </Button>
+                  </a>
                   <a
                     href="https://wa.me/919666722233"
                     target="_blank"

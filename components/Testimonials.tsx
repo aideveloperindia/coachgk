@@ -3,53 +3,112 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
-import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, Quote, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 
+// Corporate testimonials from business leaders
 const testimonials = [
   {
     id: 1,
-    name: "Dr. Rajesh Kumar",
-    position: "HR Head, Vizag Steel Plant",
-    company: "RINL",
+    name: "Anandam Dundi",
+    position: "Managing Partner",
+    company: "Shreya Infra Group",
     rating: 5,
-    text: "An inspiring trainer who energizes teams to reach higher performance levels. His leadership workshops have transformed our management approach.",
-    image: "RK",
+    text: "Gopikrishna has a remarkable ability to understand the unique challenges faced by sales teams and leaders. His coaching style is both engaging and transformative, enabling individuals to unlock their full potential. He combines a wealth of knowledge with practical, actionable advice that leads to tangible results. Under his guidance, I have seen significant improvements in both sales performance and team dynamics.",
+    image: "AD",
+  },
+];
+
+// Google Reviews - Real names only
+const googleReviews = [
+  {
+    id: 1,
+    name: "Joshybatla Varun",
+    text: "Excellent, great trainer and my guru.",
   },
   {
     id: 2,
-    name: "Priya Sharma",
-    position: "Learning & Development Manager",
-    company: "Hetero Pharma",
-    rating: 5,
-    text: "Mr. Sarvepalli's training programs are exceptional. The practical tools and motivational approach have significantly improved our team's effectiveness.",
-    image: "PS",
+    name: "Karri Venkata Swamy Naidu",
+    text: "Thank you for an inspiring session! Your words have motivated me to take action. Your enthusiasm is life-changing.",
   },
   {
     id: 3,
-    name: "Commander Anil Verma",
-    position: "Training Head",
-    company: "Hindustan Shipyard",
-    rating: 5,
-    text: "Outstanding expertise in leadership development. His ability to connect with diverse audiences and deliver impactful sessions is remarkable.",
-    image: "AV",
+    name: "Umamahesh K",
+    text: "Outstanding, mind-blowing, extraordinary performance Gopikrishna.",
   },
   {
     id: 4,
-    name: "Sneha Reddy",
-    position: "Vice Principal",
-    company: "Centurion University",
-    rating: 5,
-    text: "A master communicator who brings clarity and inspiration to every session. Our faculty and students have benefited immensely from his programs.",
-    image: "SR",
+    name: "Sayaboyena Srinivasarao",
+    text: "His speeches are very inspiring and helped me a lot in my professional career.",
   },
   {
     id: 5,
-    name: "Vikram Singh",
-    position: "Sales Head",
-    company: "Corporate Sector",
-    rating: 5,
-    text: "The sales training program was game-changing. Practical strategies, real-world examples, and motivational energy that drove immediate results.",
-    image: "VS",
+    name: "Leela Gattam",
+    text: "There is magic in his speech.",
+  },
+  {
+    id: 6,
+    name: "Samaresh Pal",
+    text: "Very good class environment and excellent interaction.",
+  },
+  {
+    id: 7,
+    name: "Dharma Rao",
+    text: "The way of conveying the subject is easy to understand.",
+  },
+  {
+    id: 8,
+    name: "Jagan Mohan",
+    text: "Took class on Success with Self-Discipline — very motivating teaching style.",
+  },
+  {
+    id: 9,
+    name: "Manas Kumar Sahoo",
+    text: "Excellent trainer; I enjoyed his class in Vizag Steel Plant.",
+  },
+  {
+    id: 10,
+    name: "Satyanarayana Kadiyali",
+    text: "Very professional trainer; course was extremely helpful.",
+  },
+  {
+    id: 11,
+    name: "Rajeev Netra A",
+    text: "Awesome class; useful for personal and professional development.",
+  },
+  {
+    id: 12,
+    name: "Hari Babu",
+    text: "Excellent session at RINL — learned so much.",
+  },
+  {
+    id: 13,
+    name: "Praveen Yenibera",
+    text: "Highly recommend GKIE for practical advice and support.",
+  },
+  {
+    id: 14,
+    name: "Suresh Suni",
+    text: "Excellent coach; very joyful person; learned about self-discipline.",
+  },
+  {
+    id: 15,
+    name: "Tharun Kumar Thirumareddy",
+    text: "Nice motivational speech; great session.",
+  },
+  {
+    id: 16,
+    name: "Sai Ram",
+    text: "Really awesome and interactive session; learned a lot.",
+  },
+  {
+    id: 17,
+    name: "Maheswara Rao",
+    text: "Wonderful coach; great insights about life.",
+  },
+  {
+    id: 18,
+    name: "Mantesh Thirupathi",
+    text: "Excellent training experience; very helpful to achieve targets.",
   },
 ];
 
@@ -75,6 +134,16 @@ export default function Testimonials() {
   };
 
   const currentTestimonial = testimonials[currentIndex];
+
+  // Get initials from full name
+  const getInitials = (name: string) => {
+    return name
+      .split(" ")
+      .map((n) => n[0])
+      .join("")
+      .toUpperCase()
+      .substring(0, 2);
+  };
 
   return (
     <section className="section-padding bg-white relative overflow-hidden" ref={ref}>
@@ -193,6 +262,92 @@ export default function Testimonials() {
               <ChevronRight className="w-6 h-6" />
             </button>
           </div>
+        </div>
+      </div>
+
+      {/* Google Reviews Section */}
+      <div className="container-custom mt-24">
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-6">
+            <Star className="w-8 h-8 text-green-600 fill-green-600" />
+          </div>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-4">
+            Google Reviews
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-2">
+            Verified 5-star reviews from participants
+          </p>
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <Star className="w-6 h-6 fill-green-600 text-green-600" />
+            <Star className="w-6 h-6 fill-green-600 text-green-600" />
+            <Star className="w-6 h-6 fill-green-600 text-green-600" />
+            <Star className="w-6 h-6 fill-green-600 text-green-600" />
+            <Star className="w-6 h-6 fill-green-600 text-green-600" />
+            <span className="text-2xl font-bold text-gray-800 ml-2">246+ Reviews</span>
+          </div>
+          <motion.div
+            className="w-24 h-1 bg-green-600 mx-auto mt-6 rounded-full"
+            initial={{ width: 0 }}
+            animate={isInView ? { width: 96 } : {}}
+            transition={{ delay: 0.7, duration: 0.6 }}
+          />
+        </motion.div>
+
+        {/* Google Reviews Grid */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {googleReviews.map((review, index) => (
+            <motion.div
+              key={review.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.5 + index * 0.05, duration: 0.5 }}
+              className="bg-gradient-to-br from-green-50 to-white rounded-xl p-6 border border-green-100 hover:shadow-lg transition-shadow"
+            >
+              {/* 5 Stars */}
+              <div className="flex gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-green-600 text-green-600" />
+                ))}
+              </div>
+
+              {/* Review Text */}
+              <p className="text-gray-700 mb-4 leading-relaxed italic">
+                "{review.text}"
+              </p>
+
+              {/* Author */}
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                  {getInitials(review.name)}
+                </div>
+                <div className="text-sm font-semibold text-gray-800">
+                  {review.name}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* View More Button */}
+        <div className="text-center mt-12">
+          <a
+            href="https://share.google/Z5qTx7NLevt7fhD0M"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-green-600 to-green-700 text-white font-semibold text-lg rounded-xl hover:from-green-700 hover:to-green-800 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 z-50 relative"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open('https://share.google/Z5qTx7NLevt7fhD0M', '_blank');
+            }}
+          >
+            View All Google Reviews
+            <ArrowRight className="w-5 h-5" />
+          </a>
         </div>
       </div>
     </section>

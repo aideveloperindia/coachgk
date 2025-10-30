@@ -62,16 +62,19 @@ export default function FooterNav() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-4 mb-6">
                 <div>
-                  <div className="text-4xl md:text-5xl font-bold font-heading mb-2">29+</div>
-                  <div className="text-white/70 text-sm">Years</div>
+                  <div className="text-3xl mb-1">🧠</div>
+                  <div className="text-4xl md:text-5xl font-bold font-heading mb-2">29</div>
+                  <div className="text-white/70 text-sm">Years of Experience</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold font-heading mb-2">44K+</div>
-                  <div className="text-white/70 text-sm">Lives Changed</div>
+                  <div className="text-3xl mb-1">👥</div>
+                  <div className="text-3xl md:text-4xl font-bold font-heading mb-2">45K+</div>
+                  <div className="text-white/70 text-sm">Participants Trained</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold font-heading mb-2">450+</div>
-                  <div className="text-white/70 text-sm">Programs</div>
+                  <div className="text-3xl mb-1">⭐</div>
+                  <div className="text-3xl md:text-4xl font-bold font-heading mb-2">4.8★</div>
+                  <div className="text-white/70 text-sm">Average Rating</div>
                 </div>
               </div>
 

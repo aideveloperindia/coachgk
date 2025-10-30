@@ -11,7 +11,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Award, CheckCircle2, Download } from "lucide-react";
+import { Award, CheckCircle2 } from "lucide-react";
 
 const certificates = [
   {
@@ -245,12 +245,6 @@ export default function Certificates() {
           <p className="text-gray-700 leading-relaxed mt-4">
             {selectedCert?.description}
           </p>
-
-          {/* Action Button */}
-          <button className="mt-4 w-full flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white rounded-xl hover:bg-primary/90 transition-all">
-            <Download className="w-5 h-5" />
-            Download Certificate
-          </button>
         </DialogContent>
       </Dialog>
     </section>

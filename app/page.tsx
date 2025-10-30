@@ -39,45 +39,6 @@ export default function Home() {
         {/* Page Sections */}
         <Hero />
         <BrandStory />
-        
-        {/* Quick Stats Section */}
-        <section className="section-padding bg-gradient-to-br from-slate-50 to-white">
-          <div className="container-custom">
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <motion.div
-                className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-              >
-                <div className="text-5xl font-heading font-bold text-primary mb-2">29+</div>
-                <div className="text-gray-600">Years of Excellence</div>
-              </motion.div>
-              <motion.div
-                className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-              >
-                <div className="text-5xl font-heading font-bold text-primary mb-2">1000+</div>
-                <div className="text-gray-600">Organizations Served</div>
-              </motion.div>
-              <motion.div
-                className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-              >
-                <div className="text-5xl font-heading font-bold text-primary mb-2">44,000+</div>
-                <div className="text-gray-600">Lives Transformed</div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
         <Testimonials />
         <FreeGuide />
       </main>

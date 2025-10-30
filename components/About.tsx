@@ -115,22 +115,19 @@ export default function About() {
               {/* Stats Cards */}
               <div className="grid grid-cols-3 gap-4 pt-6">
                 <div className="bg-gradient-to-br from-primary/5 to-accent/5 p-6 rounded-xl text-center border border-accent/20">
-                  <div className="text-3xl font-bold font-heading text-primary mb-1">
-                    <Counter end={29} />+
-                  </div>
-                  <div className="text-xs text-gray-600 font-medium">Years of Excellence</div>
+                  <div className="text-2xl mb-1">🧠</div>
+                  <div className="text-3xl font-bold font-heading text-primary mb-1">29</div>
+                  <div className="text-xs text-gray-600 font-medium">Years of Experience</div>
                 </div>
                 <div className="bg-gradient-to-br from-primary/5 to-accent/5 p-6 rounded-xl text-center border border-accent/20">
-                  <div className="text-3xl font-bold font-heading text-primary mb-1">
-                    <Counter end={44} />k+
-                  </div>
-                  <div className="text-xs text-gray-600 font-medium">People Trained</div>
+                  <div className="text-2xl mb-1">👥</div>
+                  <div className="text-3xl font-bold font-heading text-primary mb-1">45k+</div>
+                  <div className="text-xs text-gray-600 font-medium">Participants Trained</div>
                 </div>
                 <div className="bg-gradient-to-br from-primary/5 to-accent/5 p-6 rounded-xl text-center border border-accent/20">
-                  <div className="text-3xl font-bold font-heading text-primary mb-1">
-                    <Counter end={450} />+
-                  </div>
-                  <div className="text-xs text-gray-600 font-medium">Programs Conducted</div>
+                  <div className="text-2xl mb-1">🏫</div>
+                  <div className="text-3xl font-bold font-heading text-primary mb-1">470+</div>
+                  <div className="text-xs text-gray-600 font-medium">Sessions Conducted</div>
                 </div>
               </div>
             </motion.div>

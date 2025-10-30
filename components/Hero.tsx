@@ -52,22 +52,26 @@ export default function Hero() {
 
           {/* Stats */}
           <motion.div
-            className="flex flex-wrap justify-center gap-8 mb-12 text-primary"
+            className="flex flex-wrap justify-center gap-6 md:gap-8 mb-12 text-primary"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
             <div className="text-center">
-              <div className="text-4xl font-heading font-bold">29+</div>
+              <div className="text-4xl font-heading font-bold">29</div>
               <div className="text-sm text-gray-600">Years of Excellence</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-heading font-bold">1000+</div>
-              <div className="text-sm text-gray-600">Organizations Served</div>
+              <div className="text-4xl font-heading font-bold">45,000+</div>
+              <div className="text-sm text-gray-600">Participants Trained</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-heading font-bold">44,000+</div>
-              <div className="text-sm text-gray-600">Lives Transformed</div>
+              <div className="text-4xl font-heading font-bold">470+</div>
+              <div className="text-sm text-gray-600">Sessions Conducted</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-heading font-bold">4.8★</div>
+              <div className="text-sm text-gray-600">Average Rating</div>
             </div>
           </motion.div>
 

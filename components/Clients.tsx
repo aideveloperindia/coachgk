@@ -152,6 +152,47 @@ export default function Clients() {
           />
         </motion.div>
 
+        {/* Stats Banner */}
+        <motion.div
+          className="mb-16 bg-gradient-to-br from-primary via-primary to-slate-900 rounded-2xl p-8 md:p-12 text-white shadow-2xl"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.3, duration: 0.6 }}
+        >
+          <div className="grid md:grid-cols-6 gap-4 text-center">
+            <div>
+              <div className="text-3xl mb-2">🧠</div>
+              <div className="text-3xl md:text-4xl font-bold font-heading mb-2">29</div>
+              <div className="text-white/90 text-xs">Years Experience</div>
+            </div>
+            <div>
+              <div className="text-3xl mb-2">👥</div>
+              <div className="text-3xl md:text-4xl font-bold font-heading mb-2">45K+</div>
+              <div className="text-white/90 text-xs">Participants</div>
+            </div>
+            <div>
+              <div className="text-3xl mb-2">🏫</div>
+              <div className="text-3xl md:text-4xl font-bold font-heading mb-2">470+</div>
+              <div className="text-white/90 text-xs">Sessions</div>
+            </div>
+            <div>
+              <div className="text-3xl mb-2">🏢</div>
+              <div className="text-3xl md:text-4xl font-bold font-heading mb-2">25+</div>
+              <div className="text-white/90 text-xs">Corporate Clients</div>
+            </div>
+            <div>
+              <div className="text-3xl mb-2">💼</div>
+              <div className="text-3xl md:text-4xl font-bold font-heading mb-2">200+</div>
+              <div className="text-white/90 text-xs">Sales Executives</div>
+            </div>
+            <div>
+              <div className="text-3xl mb-2">⭐</div>
+              <div className="text-3xl md:text-4xl font-bold font-heading mb-2">4.8★</div>
+              <div className="text-white/90 text-xs">Rating</div>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Clients Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {clients.map((client, index) => (
@@ -236,29 +277,6 @@ export default function Clients() {
             </a>
           </motion.div>
         </div>
-
-        {/* Stats Banner */}
-        <motion.div
-          className="mt-16 bg-gradient-to-r from-primary to-primary/90 rounded-2xl p-8 md:p-12 text-white"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.6 }}
-        >
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="text-4xl md:text-5xl font-bold font-heading mb-2">1000+</div>
-              <div className="text-white/90">Organizations Served</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold font-heading mb-2">15+</div>
-              <div className="text-white/90">Industry Sectors</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold font-heading mb-2">98%</div>
-              <div className="text-white/90">Client Satisfaction</div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
