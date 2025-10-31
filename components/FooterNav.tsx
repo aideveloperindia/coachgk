@@ -81,11 +81,10 @@ export default function FooterNav() {
               {/* Social Links */}
               <div className="flex space-x-3">
                 {[
-                  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-                  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-                  { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-                  { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-                  { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
+                  { icon: Linkedin, href: "https://www.linkedin.com/in/gopikrishna-sarvepalli-420691a/", label: "LinkedIn" },
+                  { icon: Instagram, href: "https://www.instagram.com/venkatagopikrishna/", label: "Instagram" },
+                  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61560060908547", label: "Facebook" },
+                  { icon: Youtube, href: "https://www.youtube.com/@Yourcoachandmentor", label: "YouTube" },
                 ].map(({ icon: Icon, href, label }) => (
                   <motion.a
                     key={label}

@@ -16,6 +16,15 @@ const testimonials = [
     text: "Gopikrishna has a remarkable ability to understand the unique challenges faced by sales teams and leaders. His coaching style is both engaging and transformative, enabling individuals to unlock their full potential. He combines a wealth of knowledge with practical, actionable advice that leads to tangible results. Under his guidance, I have seen significant improvements in both sales performance and team dynamics.",
     image: "AD",
   },
+  {
+    id: 2,
+    name: "Naga Sulapani K. V.",
+    position: "Teacher, Coach and Consultant | Co-Founder",
+    company: "ValueCOACH Consulting",
+    rating: 5,
+    text: "I had the pleasure of being worked and coached by Gopikrishna. I call him my brother and have known him for the last 18+ years during the period of my career transition. Not only did he provide invaluable business insights, but also offered the guidance and encouragement I needed to grow as a leader.\n\nGopikrishna helped me develop my communication and resilience in leadership positions I played so far, which has had a positive ripple effect throughout my entire business. Beyond his impressive business acumen, Gopikrishna Sarvepalli is a fantastic motivator and a pleasure to work with.\n\nI strongly recommend Gopi to anyone who is ready to take their professional development to the next level.",
+    image: "NS",
+  },
 ];
 
 // Google Reviews - Real names only
@@ -116,14 +125,15 @@ export default function Testimonials() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
+    if (isPaused) return;
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 5000);
-
     return () => clearInterval(timer);
-  }, []);
+  }, [isPaused]);
 
   const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
@@ -179,7 +189,11 @@ export default function Testimonials() {
         </motion.div>
 
         {/* Testimonial Slider */}
-        <div className="max-w-4xl mx-auto">
+        <div
+          className="max-w-4xl mx-auto"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
