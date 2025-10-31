@@ -6,10 +6,10 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const socialLinks = [
-  { icon: Linkedin, url: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Youtube, url: "https://youtube.com", label: "YouTube" },
-  { icon: Instagram, url: "https://instagram.com", label: "Instagram" },
-  { icon: Facebook, url: "https://facebook.com", label: "Facebook" },
+  { icon: Linkedin, url: "https://www.linkedin.com/in/gopikrishna-sarvepalli-420691a/", label: "LinkedIn" },
+  { icon: Youtube, url: "https://www.youtube.com/@Yourcoachandmentor", label: "YouTube" },
+  { icon: Instagram, url: "https://www.instagram.com/venkatagopikrishna/", label: "Instagram" },
+  { icon: Facebook, url: "https://www.facebook.com/profile.php?id=61560060908547", label: "Facebook" },
 ];
 
 export default function Footer() {
