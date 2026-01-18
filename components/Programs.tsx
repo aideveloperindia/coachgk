@@ -243,7 +243,7 @@ export default function Programs() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {trainingPhotos.map((photo, index) => (
               <motion.div
-                key={photo.id}
+                key={`training-photo-${photo.id}-${photo.src}`}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
