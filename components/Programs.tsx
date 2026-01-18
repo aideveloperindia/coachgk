@@ -101,9 +101,7 @@ const trainingPhotos = [
   { id: 2, src: "/training-sessions/2.jpeg", alt: "Training Session 2" },
   { id: 3, src: "/training-sessions/3.jpeg", alt: "Training Session 3" },
   { id: 4, src: "/training-sessions/4.jpeg", alt: "Training Session 4" },
-  { id: 5, src: "/training-sessions/5.jpeg", alt: "Training Session 5" },
   { id: 7, src: "/training-sessions/7.jpeg", alt: "Training Session 7" },
-  { id: 8, src: "/training-sessions/8.jpeg", alt: "Training Session 8" },
   { id: 10, src: "/training-sessions/10.jpeg", alt: "Training Session 10" },
 ];
 
